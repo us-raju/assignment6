@@ -25,7 +25,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="bg-[#F0FDF4]">
     <!-- header section here  -->
     <header class="bg-[#15803D]">
       <nav class="max-w-[1200px] mx-auto">
@@ -83,11 +83,8 @@
         <div
           class="banner_container text-center flex justify-between items-center"
         >
-          <!-- <div
-            class="bg-center w-1/4 h-full bg-[url(./assets/images/hero-leaf1.png)] bg-no-repeat bg-cover"
-          ></div> -->
           <div class="w-1/4 translate-y-[38px] md:translate-y-[0px]">
-            <img class="w-full" src="./assets/images/hero-leaf1.png" alt="">
+            <img class="w-full" src="./assets/images/hero-leaf1.png" alt="" />
           </div>
           <div class="txt_container w-2/4">
             <h1 class="text-[16px] md:text-5xl font-bold text-[#1F2937] mb-2">
@@ -104,14 +101,31 @@
               Get Involved
             </button>
           </div>
-          <!-- <div
-            class="bg-center w-1/4 bg-[url(./assets/images/hero-leaf2.png)] bg-no-repeat bg-cover h-full"
-          ></div> -->
           <div class="w-1/4 translate-y-[38px] md:translate-y-[0px]">
-            <img class="w-full" src="./assets/images/hero-leaf2.png" alt="">
+            <img class="w-full" src="./assets/images/hero-leaf2.png" alt="" />
           </div>
         </div>
       </section>
+
+      <!-- Trees section here  -->
+
+      <!-- About section here  -->
+       <section id="about" class="my-[100px]">
+        <h2 class="text-[26px] md:text-[32px] font-semibold text-center mb-[40px]">About the Campaign</h2>
+        <div class="about_container max-w-[1090px] mx-auto flex flex-col md:flex-row md:items-center">
+          <div class="about_img w-full md:w-1/2 mb-[20px] md:mb-[0px] overflow-hidden">
+            <img class="w-full" src="./assets/images/about.png" alt="">
+          </div>
+          <div class="about_txt text-[16px] w-full md:w-1/2 text-[#1F2937] pl-[20px] md:ml-[50px]">
+            <p class="mb-[20px]">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+            <ul class="list-disc ml-[20px]">
+              <li>Restoration of natural habitats</li>
+              <li>Improvement of air quality</li>
+              <li>Support for local communities</li>
+            </ul>
+          </div>
+        </div>
+       </section>
     </main>
     <script src="./assets/js/app.js"></script>
   </body>
