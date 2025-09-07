@@ -25,26 +25,88 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <header class="bg-[#15803D]">
-    <nav class="w-[1240px] mx-auto">
-      <div class="navbar">
-        <div class="navbar-start">
-          <a class="text-xl text-white" href="#">Green Earth</a>
+  <body>
+    <!-- header section here  -->
+    <header class="bg-[#15803D]">
+      <nav class="max-w-[1200px] mx-auto">
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown flex md:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <a class="text-xl text-white" href="#">Green Earth</a>
+          </div>
+          <div class="navbar-center hidden md:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+              <li><a>About</a></li>
+              <li><a>Gallery</a></li>
+              <li><a>Plant a Tree</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="font-medium py-3 px-5 rounded-[50px] bg-[#FACC15] text-[#15803D] cursor-pointer"
+              >Plant a tree</a
+            >
+          </div>
         </div>
-        <div class="navbar-center lg:flex">
-          <ul class="menu menu-horizontal px-1 text-white">
-            <li><a>About</a></li>
-            <li><a>Gallery</a></li>
-            <li><a>Plant a Tree</a></li>
-          </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section here  -->
+      <section id="banner" class="bg-[#CFF0DC]">
+        <div
+          class="banner_container text-center flex justify-between h-[280px]"
+        >
+          <div
+            class="bg-center w-1/4 h-full bg-[url(./assets/images/hero-leaf1.png)] bg-no-repeat bg-cover"
+          ></div>
+          <div class="txt_container w-2/4 h-full py-[50px]">
+            <h1 class="text-5xl font-bold text-[#1F2937] mb-2">
+              Plant a Tree, Grow a Future
+            </h1>
+            <p class="text-[16px] text-[#1F2937] mb-6">
+              Join our mission to plant 1 million trees and make the Earth
+              greener for future <br />
+              generations.
+            </p>
+            <button
+              class="py-3 px-5 rounded-[50px] text-[16px] text-[#15803D] bg-[#FACC15] font-medium cursor-pointer"
+            >
+              Get Involved
+            </button>
+          </div>
+          <div
+            class="bg-center w-1/4 bg-[url(./assets/images/hero-leaf2.png)] bg-no-repeat bg-cover h-full"
+          ></div>
         </div>
-        <div class="navbar-end">
-          <a class="font-medium py-3 px-5 rounded-[50px] bg-[#FACC15] text-[#15803D] cursor-pointer">Plant a tree</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <script src="./assets/js/app.js"></script>
-  <body></body>
+      </section>
+    </main>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>
