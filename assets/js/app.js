@@ -83,7 +83,7 @@ const displayTreeCard = (data) => {
   const cartBtns = document.querySelectorAll(".cartBtn");
   const cartContainer = document.querySelector(".cart_container");
   const totalBox = document.querySelector(".total");
-  let count = 0;
+  // let count = 0;
   let total = 0;
   cartBtns.forEach((cartBtn) => {
     cartBtn.addEventListener("click", (e) => {
@@ -96,7 +96,7 @@ const displayTreeCard = (data) => {
            <div class="cart_item flex justify-between items-center bg-[#F0FDF4] py-2 px-3 mb-2">
               <div>
                 <h3 class="text-[14px] text-[#1F2937] font-semibold">${titleData}</h3>
-                <ins class="text-[16px] text-[#71717A] no-underline">${price}x <span class="count_item">${count}</span></ins>
+                <ins class="minuesPrice text-[16px] text-[#71717A] no-underline">${price} </ins><span class="count_item text-[16px] text-[#71717A]"> x 1</span>
               </div>
               <div>
                 <span class="closeBtn w-[14px] h-[16px] text-[#8C8C8C] cursor-pointer"><i class="fa-solid fa-xmark"></i></span>
@@ -110,18 +110,20 @@ const displayTreeCard = (data) => {
       const total_amount = document.getElementById("total_amount");
       total = total + priceNum;
       total_amount.innerText = total;
-
-      // close Button function
-      const closeBtns = document.querySelectorAll(".closeBtn");
-      for (const closeBtn of closeBtns) {
-        const parentDiv = closeBtn.parentElement;
-        const grandParent = parentDiv.parentElement;
-        closeBtn.addEventListener("click", () => {
-          total = total - priceNum;
-          grandParent.classList.add("hidden");
-        });
-      }
     });
+  });
+  // close Button function
+  cartContainer.addEventListener("click", (e) => {
+    if (e.target.closest(".closeBtn")) {
+      const cartItem = e.target.closest(".cart_item");
+      const dNumber = parseInt(
+        cartItem.querySelector(".minuesPrice").innerText.trim()
+      );
+      console.log(dNumber);
+      total = total - dNumber;
+      total_amount.innerText = total;
+      cartItem.remove();
+    }
   });
 };
 treeCardApi();
