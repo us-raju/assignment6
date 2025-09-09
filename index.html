@@ -31,35 +31,7 @@
       <nav class="max-w-[1200px] mx-auto">
         <div class="navbar">
           <div class="navbar-start">
-            <div class="dropdown flex md:hidden">
-              <div tabindex="0" role="button" class="btn btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow"
-              >
-                <li><a>Item 1</a></li>
-                <li>
-                  <a>Parent</a>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-            <a class="text-xl text-white font-bold" href="#">Green Earth</a>
+            <a class="text-[16px] md:text-xl text-white font-semibold md:font-bold" href="#">Green Earth</a>
           </div>
           <div class="navbar-center hidden md:flex">
             <ul class="menu menu-horizontal px-1 text-white">
@@ -70,7 +42,7 @@
           </div>
           <div class="navbar-end">
             <a
-              class="font-medium py-3 px-5 rounded-[50px] bg-[#FACC15] text-[#15803D] cursor-pointer"
+              class="text-[14px] font-medium py-1 px-1.5 md:py-3 md:px-5 rounded-3xl md:rounded-[50px] bg-[#FACC15] text-[#15803D] cursor-pointer"
               >Plant a tree</a
             >
           </div>
@@ -130,7 +102,7 @@
               class="total flex justify-between items-center text-[16px] text-[#1F2937] font-medium border-t border-[#8C8C8C]"
             >
               <p>Total:</p>
-              <ins id="total_amount" class="no-underline">&#2547;</ins>
+              <span>&#2547;<ins id="total_amount" class="no-underline">0</ins></span>
             </div>
           </div>
         </div>
@@ -180,19 +152,19 @@
           class="impact_container max-w-[1200px] mx-auto flex flex-col md:flex-row md:justify-around md:gap-5 text-center"
         >
           <div
-            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px]"
+            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px] hover:bg-[#15803D20] hover:scale-105"
           >
             <h3 class="text-[32px] font-semibold text-[#15803D]">500K+</h3>
             <p class="text-[16px] text-[#1F2937]">Trees Planted</p>
           </div>
           <div
-            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px]"
+            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px] hover:bg-[#15803D20] hover:scale-105"
           >
             <h3 class="text-[32px] font-semibold text-[#15803D]">120+</h3>
             <p class="text-[16px] text-[#1F2937]">Communities Involved</p>
           </div>
           <div
-            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px]"
+            class="w-full mb-3 md:mb-0 md:w-1/3 bg-white p-10 rounded-[12px] hover:bg-[#15803D20] hover:scale-105"
           >
             <h3 class="text-[32px] font-semibold text-[#15803D]">30+</h3>
             <p class="text-[16px] text-[#1F2937]">Countries Reached</p>
@@ -239,13 +211,10 @@
       </p>
     </footer>
 
-        <!-- Open the modal using ID.showModal() method -->
-            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-               
-                
-              </div>
-            </dialog>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box"></div>
+    </dialog>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

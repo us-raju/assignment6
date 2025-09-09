@@ -27,7 +27,7 @@ const displayCateogries = (data) => {
   for (category of data) {
     const categoryContainer = document.getElementById("Category_container");
     categoryContainer.innerHTML += `
-    <li data-id="${category.id}" class="liBtn py-2 px-2 mb-2 hover:bg-green-500 hover:rounded-sm hover:text-white cursor-pointer">
+    <li data-id="${category.id}" class="liBtn md:w-full py-2 px-2 mb-2 hover:bg-green-500 hover:rounded-sm hover:text-white cursor-pointer">
     ${category.category_name}</li>`;
   }
 
