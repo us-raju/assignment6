@@ -14,6 +14,14 @@ const treeCardApi = () => {
     .then((data) => displayTreeCard(data.plants));
 };
 
+// tree section modal funconality
+const loadTreeDetails = async (id) => {
+  const url = `https://openapi.programming-hero.com/api/plant/${id}`;
+  const res = await fetch(url);
+  const treeDetails = await res.json();
+  treeModalDisplay(treeDetails.plants);
+};
+
 // catagories display function here
 const displayCateogries = (data) => {
   for (category of data) {
@@ -55,7 +63,7 @@ const displayTreeCard = (data) => {
     const div = (treeCardContainer.innerHTML += `
     <div class="py-4 px-4 tree_card bg-white rounded-lg">
                 <img class="h-[186px] w-full" src="${card.image}" alt="" />
-                <h4 class="text-[14px] text-[#1F2937] font-semibold my-2">
+                <h4 onclick='loadTreeDetails(${card.id})' class="cursor-pointer text-[14px] text-[#1F2937] font-semibold my-2">
                   ${card.name}
                 </h4>
                 <p class="text-xs truncate text-[#71717A] mb-2">
@@ -127,3 +135,28 @@ const displayTreeCard = (data) => {
   });
 };
 treeCardApi();
+
+// tree section modal display funconality
+const treeModalDisplay = (tDetails) => {
+  // console.log(pDetails)
+  const treeDetailsBox = document.querySelector(".modal-box");
+  treeDetailsBox.innerHTML = `
+     <div>
+       <h3 class="text-xl text-[#1F2937] font-bold mb-3">${tDetails.name}</h3>
+        <img class="h-52 w-full mb-2" src="${tDetails.image}" alt="">
+        
+        <p class="text-[#1F2937] font-bold">category: <span class="text-[#71717A] font-normal">${tDetails.category}</span></p>
+        <p class="text-[#1F2937] font-bold">Price: <ins class="text-[#71717A] font-normal no-underline">&#2547;${tDetails.price}</ins></p>
+        <p class="text-[#1F2937] font-bold">Description: 
+        <span class="text-[#71717A] font-normal">${tDetails.description}</span>
+        </p>
+    </div>
+    <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+             <button class="btn">Close</button>
+        </form>
+    </div>
+  `;
+  document.getElementById("my_modal_5").showModal();
+};
