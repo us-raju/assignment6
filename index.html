@@ -79,7 +79,7 @@
     </header>
     <main>
       <!-- banner section here  -->
-      <section id="banner" class="bg-[#CFF0DC] py-3 md:py-0">
+      <section id="banner" class="bg-[#CFF0DC] py-3 md:pb-0 md:pt-5">
         <div
           class="banner_container text-center flex justify-between items-center"
         >
@@ -108,6 +108,35 @@
       </section>
 
       <!-- Trees section here  -->
+      <section id="tree" class="mt-[100px]">
+        <h3 class="text-[32px] text-[#1F2937] font-semibold text-center">
+          Choose Your Trees
+        </h3>
+        <div
+          class="tree_container grid grid-cols-6 max-w-[1200px] mx-auto gap-3"
+        >
+          <div class="w-full h-[200px] col-span-1">
+            <h3 class="text-xl font-semibold text-black mb-4">Categories</h3>
+            <ul id="Category_container"></ul>
+          </div>
+          <div
+            id="tree_card_container"
+            class="col-span-4 grid grid-cols-3 gap-3"
+          ></div>
+          <div
+            class="cart_container col-span-1 bg-white border p-4 border-red-500 rounded-lg"
+          >
+            <h3 class="text-xl font-semibold text-black mb-2">Your Cart</h3>
+
+            <div
+              class="total flex justify-between items-center text-[16px] text-[#1F2937] font-medium border-t border-[#8C8C8C]"
+            >
+              <p>Total:</p>
+              <ins id="total_amount" class="no-underline">&#2547;</ins>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- About section here  -->
       <section id="about" class="my-[100px]">
@@ -174,31 +203,42 @@
       </section>
       <!-- plant tree section here  -->
       <section id="plant_tree" class="bg-[#166534] py-[100px]">
-        <h3 class="text-[32px] font-semibold text-white text-center mb-[40px]">Plant a Tree Today</h3>
-        <div class="plant_tree_container bg-[#15803D] max-w-[400px] mx-auto text-center p-10 rounded-xl drop-shadow-[0_4px_22px_rgba(0,0,0,0.06)]">
+        <h3 class="text-[32px] font-semibold text-white text-center mb-[40px]">
+          Plant a Tree Today
+        </h3>
+        <div
+          class="plant_tree_container bg-[#15803D] max-w-[400px] mx-auto text-center p-10 rounded-xl drop-shadow-[0_4px_22px_rgba(0,0,0,0.06)]"
+        >
           <input
             type="text"
             placeholder="Your Name"
             class="input input-neutral mb-3"
-          /> <br>
+          />
+          <br />
           <input
             type="email"
             placeholder="Your Email Address"
             class="input input-neutral mb-3"
-          /> <br>
+          />
+          <br />
           <select class="select select-primary mb-5">
             <option disabled selected>Number of Trees</option>
             <option>1 Tree - $5</option>
             <option>5 Trees - $25</option>
             <option>10 Trees - $50</option>
-          </select> <br>
+          </select>
+          <br />
 
-          <button class="btn w-full !bg-[#FACC15] !text-[#15803D] !rounded-xl">Donate Now</button>
+          <button class="btn w-full !bg-[#FACC15] !text-[#15803D] !rounded-xl">
+            Donate Now
+          </button>
         </div>
       </section>
     </main>
     <footer class="bg-[#14532D] py-3">
-      <p class="text-white text-center">&copy;2025 Green Earth. All Rights Reserved.</p>
+      <p class="text-white text-center">
+        &copy;2025 Green Earth. All Rights Reserved.
+      </p>
     </footer>
     <script src="./assets/js/app.js"></script>
   </body>
